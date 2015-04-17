@@ -1,0 +1,40 @@
+cdist-type__ungleich_syslog(7)
+==============================
+ungleich GmbH <cdist--@--ungleich.ch>
+
+
+NAME
+----
+cdist-type__ungleich_syslog - Configure syslog use cases
+
+
+DESCRIPTION
+-----------
+This cdist type manages syslog, currently by using rsyslog.
+
+EXAMPLES
+--------
+
+--------------------------------------------------------------------------------
+# Listen to incoming messages (via tcp)
+__ungleich_syslog --listen
+
+# Log to other hosts
+__ungleich_syslog --log-to host1 --log-to host2
+
+# Include a raw line
+__ungleich_syslog --raw-line ':hostname,isequal,"gluster1" @@the-other-host'
+
+--------------------------------------------------------------------------------
+
+
+SEE ALSO
+--------
+- cdist-type(7)
+
+
+COPYING
+-------
+Copyright \(C) 2015 ungleich GmbH (www.ungleich.ch). 
+Free use of this software is granted under the terms 
+of the GNU General Public License version 3 (GPLv3).
